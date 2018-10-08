@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  overflow: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+.wrap {
+  width: 95%;
+  height: 97%;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 13px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.top .iconfont {
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.active {
+  border: 1px solid red;
+}
+
+.bottom {
+  margin-top: 10px;
+}
+
+.bottom ul li {
+  padding: 10px 10px;
+  margin-bottom: 15px;
+}
+
+.bottom ul li h4 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+}
+
+.bottom ul li h4 b {
+  margin-right: 40px;
+  color: red;
+}
+
+.bottom ul li h5 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.bottom ul li h5 span {
+  color: #ccc;
+}
+
+.bottom ul li h5 span b {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.bottom ul li h5 i {
+  margin-right: 80px;
+  font-style: normal;
+  color: #ccc;
+}
+
+.bottom ul li h5 i b {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.bot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.bot h4 b {
+  color: red;
+}
+
+.bot h5 {
+  color: #ccc;
+}
+
+.bot button {
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  width: 100px;
+  height: 40px;
+  border: none;
+}

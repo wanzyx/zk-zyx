@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <i class="iconfont icon-tengxunweibo"></i>
+            <div>
+                <h4>云数据库</h4>
+                <h5>安全可靠的数据库服务，人气直选，轻松管理</h5>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="list">
+                <!-- <li class="active">
+                    <h4>
+                        <span><input type="radio" name="a"> MySQL</span>
+                        <b>60天</b>
+                    </h4>
+                    <h5>
+                        <span><b>2核</b>CPU</span>
+                        <i><b>4GB</b>内存</i>
+                    </h5>
+                    <h5>
+                        <span><b>40G</b>系统盘</span>
+                        <i><b>100G</b>数据盘</i>
+                    </h5>
+                </li> -->
+            </ul>
+            <div class="bot">
+                <div>
+                    <h4>MySQL</h4>
+                    <h4><b>免费试用</b>60天</h4>
+                    <h5>原价￥1020.00</h5>
+                </div>
+                <button>立即领取</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function() {
+
+        $.ajax({
+            url: "./data/data.json",
+            success: function(res) {
+                render(res);
+            }
+        })
+
+        function render(data) {
+            var str = '';
+            data.forEach(function(v) {
+                str += `<li>
+                            <h4>
+                                <span><input type="radio" name="a"> ${v.name}</span>
+                                <b>${v.time}</b>
+                            </h4>
+                            <h5>
+                                <span><b>${v.a1}</b>${v.a2}</span>
+                                <i><b>${v.a3}</b>${v.a4}</i>
+                            </h5>
+                            <h5>
+                                <span><b>${v.a5}</b>${v.a6}</span>
+                                <i><b>${v.a7}</b>${v.a8}</i>
+                            </h5>
+                        </li>`
+            })
+            $('.list').append(str);
+        }
+        var li = document.querySelectorAll('.list li');
+        for (var i = 0; i < li.length; i++) {
+            li[i].onclick = function() {
+                for (var j = 0; j < li.length; j++) {
+                    li[j].classList.remove('active');
+                }
+                this.classList.add('active');
+            }
+        }
+    })
+</script>
+
+</html>
